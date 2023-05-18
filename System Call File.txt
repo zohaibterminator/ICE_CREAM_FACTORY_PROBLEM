@@ -1,0 +1,11 @@
+// ----------------system call-------------------//
+
+#include <linux/kernel.h>
+#include <linux/syscalls.h>
+
+asmlinkage long sys_CustomerStatus(char *buff ,int num)
+{
+	printk("\nCustomer#%d Status: %s\n",num,buff);
+
+	return 0;
+}
